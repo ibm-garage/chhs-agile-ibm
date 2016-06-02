@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: COV-Cert-dev
-  host: cov-cert-dev
+  name: sunshine-angular-dev
+  host: sunshine-angular-dev
   disk_quota: 1024M
