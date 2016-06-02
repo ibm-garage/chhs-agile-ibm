@@ -1,0 +1,35 @@
+.well {
+  background-color: gainsboro;
+  margin-top: 2px;
+}
+.header-dark {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.header-light {
+  background-color: grey;
+  color: white;
+}
+
+.header {
+  padding: 10px 0 10px 0;
+}
+
+.indent {
+  padding-left: 5px;
+}
+
+.start-button {
+  padding: 10px 0 10px 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
