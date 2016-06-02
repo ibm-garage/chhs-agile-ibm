@@ -1,0 +1,48 @@
+<div className="profile">
+
+  <md-toolbar class="md-tall md-accent" layout="column">
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>{{data}}</span>
+      </h2>
+    </div>
+  </md-toolbar>
+  <br>
+    <div className="parent-name">
+      <b>Parent Name (First Name, Last Name, Middle Name)</b>: Rachel Marie Robins
+      <button className="edit-profile" ng-click="editProfile()">Edit Profile</button>
+    </div>
+
+    <div className="parent-address">
+      <b>Parent Home Address (1st Line Address, 2nd Line Address, City, State, Zip)</b>:
+      {{profileData.parent_home_address}}
+    </div>
+    <div className="parent-home-number">
+      <b>Parent Home Phone (area code, phone number)</b>:
+      626-514-1111
+    </div>
+    <div className="parent-phone-number">
+      <b>Cell or Work Phone (area code, phone number)</b>: 626-514-0000
+    </div>
+    <div className="patient-dob">
+      <b>Patient DOB (YYYY-MM-DD)</b>: 6/20/1984
+    </div>
+    <div className="patient-gender">
+      <b>Patient Gender</b>: Female
+    </div>
+    <div className="patient-ssn">
+      <b>Patient SSN (eg. 123-44-5123)</b>: 333-44-5555
+    </div>
+    <div className="caseworker-name">
+      <b>Case Worker Name (First Name, Last Name)</b>: Francis Romero
+    </div>
+    <div className="caseworker-phone-number">
+      <b>Phone Number</b>: 626-582-1984
+    </div>
+    <div className="child-fullname">
+      <b>Child (First Name, Middle Name, Last Name)</b>: Margaret Ann Robins
+    </div>
+    <div className="child-pref-name">
+      <b>Child Preferred Name</b>: Molly
+    </div>
+</div>

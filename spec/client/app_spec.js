@@ -21,8 +21,22 @@ describe('App Routes', function() {
 
   describe('New Application Route', function(){
     it('Uses the correct Route and Controller', function(){
-        expect($route.routes['/application/new'].controller).toBe('NewApplicationController');
-        expect($route.routes['/application/new'].templateUrl).toBe('client/views/applications/newApplication.html');
+      expect($route.routes['/application/new'].controller).toBe('NewApplicationController');
+      expect($route.routes['/application/new'].templateUrl).toBe('client/views/applications/newApplication.html');
+    });
+  });
+
+  describe('New Profile Route', function(){
+    it('Uses the correct Route and Controller', function(){
+      expect($route.routes['/'].controller).toBe('ProfileController');
+      expect($route.routes['/'].templateUrl).toBe('client/views/applications/profile.html');
+    });
+  });
+
+  describe('New Inbox Route', function(){
+    it('Uses the correct Route and Controller', function(){
+      expect($route.routes['/inbox'].controller).toBe('InboxController');
+      expect($route.routes['/inbox'].templateUrl).toBe('client/views/applications/inbox.html');
     });
   });
 });

@@ -33,3 +33,7 @@ a {
   color: white;
   text-decoration: none;
 }
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar).md-accent, md-toolbar:not(.md-menu-toolbar).md-accent {
+  background: #2196F3;
+}
