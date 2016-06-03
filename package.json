@@ -24,7 +24,8 @@
     "ng-storage": "^0.3.2"
   },
   "engines": {
-    "node": "4.2.x"
+    "node": "4.2.x",
+    "npm": "3.x.x"
   },
   "devDependencies": {
     "jasmine": "^2.4.1",
