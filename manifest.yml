@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: sunshine-angular
-  host: sunshine-angular
+  name: angular-healthcare
+  host: angular-healthcare
   disk_quota: 1024M
