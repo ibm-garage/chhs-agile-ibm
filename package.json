@@ -20,7 +20,8 @@
     "angular-sanitize": "^1.5.5",
     "cfenv": "1.0.x",
     "express": "4.13.x",
-    "ng-file-upload": "^11.2.3"
+    "ng-file-upload": "^11.2.3",
+    "ng-storage": "^0.3.2"
   },
   "engines": {
     "node": "4.2.x"
