@@ -39,4 +39,11 @@ describe('App Routes', function() {
       expect($route.routes['/inbox'].templateUrl).toBe('client/views/applications/inbox.html');
     });
   });
+
+  describe('New Search Route', function(){
+    it('Uses the correct Route and Controller', function(){
+      expect($route.routes['/search'].controller).toBe('SearchController');
+      expect($route.routes['/search'].templateUrl).toBe('client/views/applications/search.html');
+    });
+  });
 });
