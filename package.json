@@ -2,6 +2,10 @@
   "name": "Sunshine-Angular",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "4.2.x",
+    "npm": "~3.9.x"
+  },
   "scripts": {
     "start": "node server.js",
     "test": "npm run test-server && npm run test-client",
@@ -22,10 +26,6 @@
     "express": "4.13.x",
     "ng-file-upload": "^11.2.3",
     "ng-storage": "^0.3.2"
-  },
-  "engines": {
-    "node": "4.2.x",
-    "npm": "~3.9.x"
   },
   "devDependencies": {
     "jasmine": "^2.4.1",
