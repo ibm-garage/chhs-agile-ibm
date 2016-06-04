@@ -7,7 +7,7 @@ describe('Search', function() {
     if(process.env.DEVELOPMENT) {
       host = process.env.DEVELOPMENT + ":" + cfenv.getAppEnv().port;
     } else {
-      host = cfenv.getAppEnv().url();
+      host = cfenv.getAppEnv().url;
     }
     browser.get('http://' + host + '#/search');
   });
