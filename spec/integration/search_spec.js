@@ -5,6 +5,20 @@ describe('Search', function() {
 
   beforeEach(function(){
     var host;
+
+    var EC = protractor.ExpectedConditions;
+
+    browser.ignoreSynchronization = true;
+    browser.get('/');
+
+    // wait for deferred bootstrap body to not be present
+    var body = $("body.deferred-bootstrap-loading");
+    browser.wait(EC.stalenessOf(body), 10000).then(function () {
+      browser.ignoreSynchronization = false;
+    });
+    browser.waitForAngular();  // might not be needed
+
+    ///environment urls
     if(process.env.DEVELOPMENT) {
       host = cfenv.getAppEnv().url;
     } else {
