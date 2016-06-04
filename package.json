@@ -26,7 +26,8 @@
     "cfenv": "1.0.x",
     "express": "4.13.x",
     "ng-file-upload": "^11.2.3",
-    "ngstorage": "^0.3.10"
+    "ngstorage": "^0.3.10",
+    "node-env-file": "^0.1.8"
   },
   "devDependencies": {
     "jasmine": "^2.4.1",
