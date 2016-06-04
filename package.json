@@ -10,7 +10,8 @@
     "start": "node server.js",
     "test": "npm run test-server && npm run test-client",
     "test-server": "jasmine",
-    "test-client": "karma start karma.conf.js --single-run"
+    "test-client": "karma start karma.conf.js --single-run",
+    "test-integration": "protractor conf.js"
   },
   "dependencies": {
     "angular": "1.5.x",
