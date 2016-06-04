@@ -3,6 +3,7 @@ var cfenv = require('cfenv');
 describe('Search', function() {
 
   beforeEach(function(){
+    console.log('url: '+cfenv.getAppEnv().url);
     browser.get(cfenv.getAppEnv().url + '#/search');
   });
 
