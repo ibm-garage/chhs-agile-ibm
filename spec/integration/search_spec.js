@@ -3,13 +3,7 @@ var cfenv = require('cfenv');
 describe('Search', function() {
 
   beforeEach(function(){
-    var host;
-    if(process.env.DEVELOPMENT) {
-      host = process.env.DEVELOPMENT + ":" + cfenv.getAppEnv().port;
-    } else {
-      host = cfenv.getAppEnv().url;
-    }
-    browser.get('http://' + host + '#/search');
+    browser.get(cfenv.getAppEnv().url + '#/search');
   });
 
   it('Zip Code', function() {
