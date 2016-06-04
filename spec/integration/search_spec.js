@@ -1,10 +1,17 @@
 var cfenv = require('cfenv');
+require('dotenv').config();
 
 describe('Search', function() {
 
   beforeEach(function(){
-    console.log('url: '+cfenv.getAppEnv().url);
-    browser.get(cfenv.getAppEnv().url + '#/search');
+    var host;
+    if(process.env.DEVELOPMENT) {
+      host = cfenv.getAppEnv().url;
+    } else {
+      host = "http://" + process.env.PRODUCTION;
+    }
+    console.log('host '+host );
+    browser.get(host + '/#/search');
   });
 
   it('Zip Code', function() {
