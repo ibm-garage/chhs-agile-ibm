@@ -46,4 +46,11 @@ describe('App Routes', function() {
       expect($route.routes['/search'].templateUrl).toBe('client/views/applications/search.html');
     });
   });
+
+  describe('New Facilities Route', function(){
+    it('Uses the correct Route and Controller', function(){
+      expect($route.routes['/facilities'].controller).toBe('FacilitiesController');
+      expect($route.routes['/facilities'].templateUrl).toBe('client/views/applications/facilities.html');
+    });
+  });
 });

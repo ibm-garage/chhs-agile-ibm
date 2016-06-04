@@ -3,7 +3,11 @@
 
   var module = angular.module('searchModule', []);
 
-  module.controller('SearchController', ['$scope', function($scope){
+  module.controller('SearchController', ['$scope', '$location', function($scope, $location){
     $scope.data = "Search";
+    
+    $scope.searchZipCodes = function () {
+      $location.path('/facilities');
+    }
   }]);
 })();

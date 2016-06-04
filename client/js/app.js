@@ -1,7 +1,8 @@
 // (function(){
   'use strict';
 
-  angular.module('myApp', ['ngRoute', 'CertAppModule', 'profileModule', 'inboxModule', 'searchModule', 'ngMaterial'])
+  angular.module('myApp', ['ngRoute', 'CertAppModule', 'profileModule',
+    'inboxModule', 'searchModule', 'facilitiesModule', 'ngMaterial'])
 
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
@@ -16,6 +17,10 @@
         .when('/search', {
           templateUrl: 'client/views/applications/search.html',
           controller: 'SearchController'
+        })
+        .when('/facilities', {
+          templateUrl: 'client/views/applications/facilities.html',
+          controller: 'FacilitiesController'
         })
         .when('/certificationSelection', {
             templateUrl: 'client/views/applications/certificationSelection.html',
