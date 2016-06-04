@@ -19,5 +19,9 @@ describe('Search Module', function () {
     it('has a search controller', function () {
       expect($scope.data).toEqual('Search');
     });
+
+    // it('scope has a facilities', function(){
+    //   expect($scope.facilities).toBeDefined();
+    // });
   });
 });

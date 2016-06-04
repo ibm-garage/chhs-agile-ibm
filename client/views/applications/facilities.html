@@ -7,6 +7,12 @@
     </div>
   </md-toolbar>
 
-  <span class="address">
-  12968 Frederick St Ste D Moreno Valley, CA 92553</span>
+  <div class="address" ng-repeat="facility in showFacilities">
+    {{facility.facility_name}}
+    {{facility.facility_telephone_number}}
+    {{facility.facility_address}}
+    {{facility.location_city}}
+    {{facility.location_state}}
+    {{facility.location_zip}}
+  </div>
 </div>

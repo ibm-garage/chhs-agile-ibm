@@ -4,20 +4,25 @@ describe('Facilities Module', function () {
   var $controller;
   var $scope;
   var element;
+  var facilityFactory;
   beforeEach(module('facilitiesModule'));
+  beforeEach(module('facilityFactory'));
 
   beforeEach(function() {
     $scope = {};
 
-    inject(function ($controller, $rootScope, $compile) {
-      var $controller = $controller('FacilitiesController', {$scope: $scope});
+    inject(function ($controller, $rootScope, $compile, facilityFactory) {
+      var $controller = $controller('FacilitiesController',
+        {$scope: $scope, facilityFactory: facilityFactory});
+
     });
   });
 
   describe('Facilities Controller', function () {
 
-    it('has a Facilities controller', function () {
-      expect($scope.data).toEqual('Facilities');
+    xit('has a Facilities controller', function () {
+      expect($scope.data).toBeDefined();
     });
+    
   });
 });

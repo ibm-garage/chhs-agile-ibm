@@ -5,12 +5,6 @@ describe('Search', function() {
 
   beforeEach(function(){
     var host;
-
-    var EC = protractor.ExpectedConditions;
-
-    browser.ignoreSynchronization = true;
-
-    ///environment urls
     if(process.env.DEVELOPMENT) {
       host = cfenv.getAppEnv().url;
     } else {
@@ -18,14 +12,10 @@ describe('Search', function() {
     }
     console.log('host '+host );
 
+    
+
+
     browser.get(host + '/#/search');
-
-    // wait for deferred bootstrap body to not be present
-    var body = $("body.deferred-bootstrap-loading");
-    browser.wait(EC.stalenessOf(body), 10000).then(function () {
-      browser.ignoreSynchronization = false;
-    });
-
   });
 
   it('Zip Code', function() {
@@ -45,7 +35,7 @@ describe('Search', function() {
     var zipCodes = element(by.model('zipcodes')).sendKeys('92553');
     element(by.css('[ng-click="searchZipCodes()"]')).click();
 
-    var address = '12968 Frederick St Ste D Moreno Valley, CA 92553';
+    var address = "12730 HEACOCK ST. SUITE 9";
     expect(element(by.css('.address')).getText()).toContain(address);
   });
 
