@@ -11,6 +11,9 @@ describe('Search', function() {
       host = "http://" + process.env.STAGING;
     }
     console.log('host '+host );
+
+    browser.waitForAngular();
+
     browser.get(host + '/#/search');
   });
 
