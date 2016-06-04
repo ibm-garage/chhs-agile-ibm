@@ -8,7 +8,7 @@ describe('Search', function() {
     if(process.env.DEVELOPMENT) {
       host = cfenv.getAppEnv().url;
     } else {
-      host = "http://" + process.env.PRODUCTION;
+      host = "http://" + process.env.STAGING;
     }
     console.log('host '+host );
     browser.get(host + '/#/search');
