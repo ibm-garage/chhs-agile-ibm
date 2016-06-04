@@ -12,9 +12,6 @@ describe('Search', function() {
     }
     console.log('host '+host );
 
-    browser.ignoreSynchronization = true;
-
-
     browser.get(host + '/#/search');
   });
 
