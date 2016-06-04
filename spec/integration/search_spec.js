@@ -16,8 +16,7 @@ describe('Search', function() {
     browser.wait(EC.stalenessOf(body), 10000).then(function () {
       browser.ignoreSynchronization = false;
     });
-    browser.waitForAngular();  // might not be needed
-
+    
     ///environment urls
     if(process.env.DEVELOPMENT) {
       host = cfenv.getAppEnv().url;
