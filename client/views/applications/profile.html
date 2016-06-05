@@ -1,61 +1,70 @@
-<div class="profile">
+<div layout="row" layout-align="center center">
 
-  <md-toolbar class="md-tall md-accent" layout="column">
-    <div class="md-toolbar-tools">
-      <h2>
-        <span>{{data}}</span>
-      </h2>
-    </div>
-  </md-toolbar>
-  <br>
-
-  <div class="edit-profile">
-    <div edit-my-profile />
-  </div>
-
-  <div ng-show="noneditable">
-    <div class="parent-name">
-      <b>Parent Name (First Name, Last Name, Middle Name)</b>: Rachel Marie Robins
-    </div>
-  </div>
-
-  <div ng-show="editableFields">
-    <div class="parent-address">
-      <b>Parent Home Address (1st Line Address, 2nd Line Address, City, State, Zip)</b>:
-      {{storage.parent_home_address}}
+<div layout="column">
+  <div class="profile">
+    <div class="edit-profile">
+      <div edit-my-profile />
     </div>
 
-    <div class="parent-home-number">
-      <b>Parent Home Phone (area code, phone number)</b>:
-      {{storage.parent_home_phone}}
-    </div>
-    <div class="parent-phone-number">
-      <b>Cell or Work Phone (area code, phone number)</b>:
-      {{storage.parent_work_number}}
-    </div>
-  </div>
+    <div layout="row">
+      <div layout="column" flex="40">
+          <img src="client/css/profile.png" ng-show="noneditable" width="150" height="170">
+      </div>
+      <div layout="column">
+        <div ng-show="noneditable">
+          <div class="parent-name">
+            <h3 class=".md-display-1">Rachel Marie Robins</h3>
+          </div>
+        </div>
+          <div ng-show="editableFields">
+            <div class="parent-address">
+              <p><h4 class=".md-title">{{storage.parent_home_address}} </h4></p>
+            </div>
+            <div class="parent-home-number">
+              H: {{storage.parent_home_phone}}
+            </div>
+            <div class="parent-phone-number">
+              W: {{storage.parent_work_number}}
+            </div>
+          </div>
+      </div>
 
-  <div ng-show="noneditable">
-    <div class="Parent-dob">
-      <b>Parent DOB (YYYY-MM-DD)</b>: 6/20/1984
+      <div layout="column">
+        <i class="material-icons" ng-show="noneditable" class="check_mark" ng-click="editProfile()">mode_edit</i>
+        <i class="material-icons" ng-hide="editableFields" ng-click="editProfile()">check</i>
+      </div>
     </div>
-    <div class="Parent-gender">
-      <b>Parent Gender</b>: Female
-    </div>
-    <div class="Parent-ssn">
-      <b>Parent SSN (eg. 123-44-5123)</b>: 333-44-5555
-    </div>
-    <div class="caseworker-name">
-      <b>Case Worker Name (First Name, Last Name)</b>: Francis Romero
-    </div>
-    <div class="caseworker-phone-number">
-      <b>Phone Number</b>: 626-582-1984
-    </div>
-    <div class="child-fullname">
-      <b>Child (First Name, Middle Name, Last Name)</b>: Margaret Ann Robins
-    </div>
-    <div class="child-pref-name">
-      <b>Child Preferred Name</b>: Molly
+
+
+
+    <div ng-show="noneditable">
+      <hr>
+      <div layout="row">
+        <div layout="column" flex="40">
+          <div class="caseworker-name">
+            <h4 class=".md-headline">Case Worker</h4>
+          </div>
+        </div>
+
+        <div layout="column">
+          Francis Romero<br>
+          951-582-1984
+        </div>
+      </div>
+
+      <br>
+      <div layout="row">
+        <div layout="column" flex="40">
+          <div class="child-fullname">
+            <h4 class=".md-headline">Child</h4>
+          </div>
+        </div>
+
+        <div layout="column">
+          Margaret <div class="child-pref-name">"Molly"</div> Robins
+        </div>
+      </div>
     </div>
   </div>
 </div>
+  </div>

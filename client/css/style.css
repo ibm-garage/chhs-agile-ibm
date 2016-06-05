@@ -37,3 +37,17 @@ a {
 md-toolbar.md-default-theme:not(.md-menu-toolbar).md-accent, md-toolbar:not(.md-menu-toolbar).md-accent {
   background: #2196F3;
 }
+
+md-toolbar.md-default-theme.md-hue-2:not(.md-menu-toolbar), md-toolbar.md-hue-2:not(.md-menu-toolbar) {
+  background: #2196F3;
+}
+
+.arrow_forward {
+  cursor: pointer;
+  color: #1464F6;
+}
+
+.check_mark {
+  cursor: pointer;
+  color: #1464F6;
+}

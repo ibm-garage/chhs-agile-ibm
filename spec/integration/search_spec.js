@@ -25,25 +25,27 @@ describe('Search', function() {
       browser.ignoreSynchronization = false;
     });
 
+    browser.ignoreSynchronization = false;
+
     browser.waitForAngular();
 
 
   });
 
   it('Zip Code', function() {
-
     expect(browser.getTitle()).toEqual('CHHS');
   });
 
-  xit('has a text box for the zip code', function(){
+  it('has a text box for the zip code', function(){
     expect(element(by.css('.zipcodes')).isPresent()).toBe(true);
   });
 
-  xit('clicks the search button', function(){
-
-    var myEle =element(by.css('.search-button'));
+  it('finds the search button', function(){
+    var myEle = element(by.cssContainingText('.material-icons', 'arrow_forward'));
     expect(myEle.isPresent()).toBe(true);
+  });
 
+  it('clicks the search button', function(){
     var zipCodes = element(by.model('zipcodes')).sendKeys('92553');
     element(by.css('[ng-click="searchZipCodes()"]')).click();
 
