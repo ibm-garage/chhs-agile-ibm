@@ -28,16 +28,9 @@
   }]);
 
   module.directive('editMyProfile', function () {
-    var editProfileTemplate =
-    '<button ng-click="editProfile()">Edit</button>'+
-      '<div ng-hide="editableValue">' +
-      '<label><b>Parent Home Address (1st Line Address, 2nd Line Address, City, State, Zip)</b>: <input type="text" ng-model="viewAddress"/></label><br>'+
-      '<label><b>Parent Home Phone (area code, phone number)</b>: <input type="text" ng-model="viewHomePhone"/></label><br>'+
-      '<label><b>Cell or Work Phone (area code, phone number)</b>: <input type="text" ng-model="viewWorkPhone"/></label></div>'+
-      '';
     return {
       restrict: "A",
-      template: editProfileTemplate,
+      templateUrl: 'client/views/applications/edit.html',
       link: function(scope, element, attrs, localStorage) {
         scope.editableValue = true;
         scope.viewAddress = scope.storage.parent_home_address;

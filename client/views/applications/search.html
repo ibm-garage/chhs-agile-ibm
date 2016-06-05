@@ -1,13 +1,14 @@
-<div class="search">
-  <md-toolbar class="md-tall md-accent" layout="column">
-    <div class="md-toolbar-tools">
-      <h2>
-        <span>{{data}}</span>
-      </h2>
+<div layout="row" layout-align="center center">
+    <div class="search">
+      <md-content flex>
+        <label class="md-title">ZIP Code: </label>
+        <md-input-container>
+          <input required type="text" class="zipcodes" ng-model="zipcodes" />
+        </md-input-container>
+        <div class="arrow_forward" style="text-align: right">
+          <i class="material-icons" ng-click="searchZipCodes()">arrow_forward</i>
+        </div>
+      </md-content>
     </div>
-  </md-toolbar>
-  <label>Zip Code: </label>
-  <input type="text" class="zipcodes" ng-model="zipcodes" />
-  <input type="submit" class="search-button" ng-click="searchZipCodes()" />
-
 </div>
+
