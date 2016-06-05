@@ -16,7 +16,7 @@ describe('Search', function() {
 
   });
 
-  xit('Zip Code', function() {
+  it('Zip Code', function() {
 
     expect(browser.getTitle()).toEqual('CHHS');
   });
