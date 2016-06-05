@@ -20,6 +20,7 @@ describe('Search', function() {
 
   it('Zip Code', function() {
 
+    browser.waitForAngular();
     expect(browser.getTitle()).toEqual('CHHS');
   });
 
