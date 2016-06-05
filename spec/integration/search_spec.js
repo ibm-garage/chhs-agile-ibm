@@ -10,17 +10,14 @@ describe('Search', function() {
     } else {
       host = "http://" + process.env.STAGING;
     }
-    console.log('host '+host );
-
-    
-
+    //console.log('host '+host );
 
     browser.get(host + '/#/search');
+
   });
 
-  it('Zip Code', function() {
+  xit('Zip Code', function() {
 
-    browser.waitForAngular();
     expect(browser.getTitle()).toEqual('CHHS');
   });
 
