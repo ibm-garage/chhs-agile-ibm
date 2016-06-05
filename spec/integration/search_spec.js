@@ -10,12 +10,10 @@ describe('Search', function() {
     } else {
       host = "http://" + process.env.STAGING;
     }
-    console.log('host '+host );
-
-    
-
+    //console.log('host '+host );
 
     browser.get(host + '/#/search');
+
   });
 
   it('Zip Code', function() {

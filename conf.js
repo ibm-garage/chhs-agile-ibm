@@ -1,4 +1,4 @@
-// conf.js
+// Config for protractor tests conf.js
 exports.config = {
   framework: 'jasmine',
   //seleniumAddress: 'http://localhost:4444/wd/hub',
@@ -8,5 +8,9 @@ exports.config = {
     'phantomjs.binary.path': require('phantomjs-prebuilt').path,
     'phantomjs.cli.args': ['--web-security=false', '--ignore-ssl-errors=true', '--webdriver-loglevel=DEBUG'],
   },
-  seleniumServerJar: 'spec/support/selenium-server-standalone-2.53.0.jar'
+  seleniumServerJar: 'spec/support/selenium-server-standalone-2.53.0.jar',
+  rootElement: 'html',
+  //onPrepare: function() {
+  //  browser.ignoreSynchronization = true;
+  //},
 };
