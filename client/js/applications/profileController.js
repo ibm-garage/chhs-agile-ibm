@@ -11,12 +11,12 @@
     $scope.storage.parent_home_address;
 
     var jsonData = JSON.stringify($scope.storage);
+    $scope.profileData = {
+      parent_home_address: "4567 Cedar Avenue, Chula Vista 91910",
+      parent_home_phone: "626-514-1111",
+      parent_work_number: "626-514-0000"
+    };
     if(jsonData.indexOf('{}') >=0) {
-      $scope.profileData = {
-        parent_home_address: "4567 Cedar Avenue, Chula Vista 91910",
-        parent_home_phone: "626-514-1111",
-        parent_work_number: "626-514-0000"
-      };
       $scope.storage.parent_home_address = $scope.profileData.parent_home_address;
       $scope.storage.parent_home_phone = $scope.profileData.parent_home_phone;
       $scope.storage.parent_work_number = $scope.profileData.parent_work_number;

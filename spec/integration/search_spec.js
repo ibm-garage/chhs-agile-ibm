@@ -24,10 +24,8 @@ describe('Search', function() {
     browser.wait(EC.presenceOf(body), 10000).then(function () {
       browser.ignoreSynchronization = false;
     });
-
-    browser.ignoreSynchronization = false;
-
-    browser.waitForAngular();
+    
+    //browser.waitForAngular();
 
 
   });
