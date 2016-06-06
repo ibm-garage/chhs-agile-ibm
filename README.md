@@ -1,19 +1,19 @@
-Bluemix Garage CHHS Prototype Readme
+# Bluemix Garage CHHS Prototype
 
 
+## Running the app on Bluemix
 * To install and run the prototype on another machine do the following:
 * Download node.js from https://nodejs.org/ 
-* Update npm if required (on Mac run “sudo npm install npm -g”) 
+* Update npm if required (on Mac run ```sudo npm install npm -g```) 
 * Download the application from Github (git clone or download zip file and unzip) 
 * Open a terminal window and change to the root folder of the application 
-* Run “npm install” in the root folder of the application 
-* Run “npm start” 
+* Run ```npm install``` in the root folder of the application 
+* Run ```npm start```
 * Open a browser and point URL displayed upon application start up
  
  
- 
-
-We used the IBM Bluemix Garage agile development methodology to build this prototype in accordance with the guidelines of the RFI. See: https://www.ibm.com/devops/method. 
+## Bluemix Garage Method
+ We used the IBM Bluemix Garage agile development methodology to build this prototype in accordance with the guidelines of the RFI. See: [Devops Method](https://www.ibm.com/devops/method)
  
  
  a. Assigned one leader and gave that person authority and responsibility and held that person
