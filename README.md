@@ -1,8 +1,8 @@
-# Bluemix Garage CHHS Prototype
+# 'Bluemix Garage CHHS Prototype' Overview
 
 
-## Running the app on Bluemix
-* To install and run the prototype on another machine do the following:
+## Running the app locally
+To install and run the prototype on another machine do the following:
 * Download node.js from https://nodejs.org/ 
 * Update npm if required (on Mac run ```sudo npm install npm -g```) 
 * Download the application from Github (git clone or download zip file and unzip) 
@@ -10,11 +10,19 @@
 * Run ```npm install``` in the root folder of the application 
 * Run ```npm start```
 * Open a browser and point URL displayed upon application start up
+
+## Troubleshooting
+
+The primary source of debugging information for your Bluemix app is the logs. To see them, run the following command using the Cloud Foundry CLI:
+
+  ```
+  $ cf logs <application-name> --recent
+  ```
+For more detailed information on troubleshooting your application, see the [Troubleshooting section](https://www.ng.bluemix.net/docs/troubleshoot/tr.html) in the Bluemix documentation.
  
  
 ## Bluemix Garage Method
  We used the IBM Bluemix Garage agile development methodology to build this prototype in accordance with the guidelines of the RFI. See: [Devops Method](https://www.ibm.com/devops/method)
- 
  
  a. Assigned one leader and gave that person authority and responsibility and held that person
  accountable for the quality of the prototype submitted
