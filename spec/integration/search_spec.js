@@ -21,7 +21,7 @@ describe('Search', function() {
 
     var body = $(".body-is-loaded");
 
-    browser.wait(EC.presenceOf(body), 10000).then(function () {
+    browser.wait(EC.presenceOf(body), 5000).then(function () {
       browser.ignoreSynchronization = false;
     });
 
