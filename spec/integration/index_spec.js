@@ -21,20 +21,28 @@ describe('footer', function(){
     expect(element(by.id('profile-link')).getText()).toContain('person');
   });
 
-  describe('clicks profile', function(){
+  describe('clicking profile from search', function(){
 
     beforeEach(function(){
       browser.get(host + '/#/search');
-      console.log('host me: '+host);
+      //console.log('host me: '+host);
+      element(by.cssContainingText('.material-icons', 'person')).click();
+    });
+
+    it('goes to the profile page', function(){
+      expect(element(by.css('.md-toolbar-tools')).getText()).toContain('Profile');
+    });
+  });
+
+  describe('clicking search from profile', function(){
+    beforeEach(function(){
+      browser.get(host + '/#/profile');
+      //console.log('host me: '+host);
+      element(by.cssContainingText('.material-icons', 'search')).click();
     });
 
     it('loads the search page', function(){
       expect(element(by.css('.md-toolbar-tools')).getText()).toContain('Search');
-    });
-
-    it('goes to the profile page', function(){
-      var profileIcon = element(by.cssContainingText('.material-icons', 'person')).click();
-      expect(element(by.css('.md-toolbar-tools')).getText()).toContain('Profile');
     });
   });
 });
