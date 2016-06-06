@@ -11,6 +11,9 @@ To install and run the prototype on another machine do the following:
 * Run ```npm start```
 * Open a browser and point URL displayed upon application start up
 
+## Running the app on Bluemix
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
+
 ## Troubleshooting
 
 The primary source of debugging information for your Bluemix app is the logs. To see them, run the following command using the Cloud Foundry CLI:
