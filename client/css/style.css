@@ -51,3 +51,22 @@ md-toolbar.md-default-theme.md-hue-2:not(.md-menu-toolbar), md-toolbar.md-hue-2:
   color: #1464F6;
 }
 
+md-card {
+  color: grey;
+  box-shadow: 0px 4px 9px 2px;
+}
+
+md-card-title {
+  background:#E3F2FD;
+  color:black;
+}
+
+.md-headline.small-title {
+  font-size: 1.25em;
+  padding-top: 11px;
+}
+
+md-card-footer {
+  color: black;
+  border-top:1px solid #E0E0E0;
+}

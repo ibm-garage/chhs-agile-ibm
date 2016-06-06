@@ -3,8 +3,7 @@ require('dotenv').config();
 var host;
 beforeEach(function(){
 
-  browser.ignoreSynchronization = true;
-
+  //browser.ignoreSynchronization = true;
 
   if(process.env.DEVELOPMENT) {
     host = cfenv.getAppEnv().url;
