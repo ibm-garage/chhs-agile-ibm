@@ -1,4 +1,4 @@
-(function(){
+(function(angular){
   'use strict';
 
 angular.module('myApp', ['ngRoute', 'CertAppModule', 'profileModule',
@@ -40,4 +40,5 @@ angular.module('myApp', ['ngRoute', 'CertAppModule', 'profileModule',
       $rootScope.title = current.$$route.title;
     });
   }]);
-})();
+})(window.angular);
+

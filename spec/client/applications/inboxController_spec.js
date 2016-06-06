@@ -15,8 +15,25 @@ describe('Inbox Module', function () {
   });
 
   describe('Inbox Controller', function () {
-    it('has a inbox controller', function () {
-      expect($scope.data).toEqual('Inbox');
+
+    describe('Messages List', function () {
+
+      it('is defined', function () {
+        expect($scope.inboxData).toBeDefined();
+      });
+
+      it('has a title', function () {
+        expect($scope.inboxData[0].title).toContain('Welcome');
+      });
+
+      it('has a from', function () {
+        expect($scope.inboxData[0].from).toContain('From: Francis');
+      });
+
+      it('has 2 messages', function () {
+        expect($scope.inboxData.length).toEqual(2);
+      });
     });
+
   });
 });
