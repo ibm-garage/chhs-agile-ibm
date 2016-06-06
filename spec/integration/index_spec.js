@@ -12,13 +12,13 @@ beforeEach(function(){
   browser.get(host + '/');
 });
 
-xdescribe('footer', function(){
+describe('footer', function(){
   it('is on the index page', function() {
     expect(element(by.tagName('footer')).isPresent()).toBe(true);
   });
 
   it('has a profile icon', function () {
-    expect(element(by.css('.material-icons')).getText()).toContain('account_circle');
+    expect(element(by.id('profile-link')).getText()).toContain('person');
   });
 
   describe('clicks profile', function(){
@@ -33,7 +33,7 @@ xdescribe('footer', function(){
     });
 
     it('goes to the profile page', function(){
-      var profileIcon = element(by.cssContainingText('.material-icons', 'account_circle')).click();
+      var profileIcon = element(by.cssContainingText('.material-icons', 'person')).click();
       expect(element(by.css('.md-toolbar-tools')).getText()).toContain('Profile');
     });
   });

@@ -23,22 +23,28 @@
     </div>
   </md-toolbar>
 
-    <md-toolbar class="md-tall md-accent" layout="column" show-gt-md hide-xs show-md>
-      <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-        <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-      </md-button>
-      <div class="md-toolbar-tools">
-        <h2>
-          <span>{{title}}</span>
-        </h2>
-        <span flex></span>
-      </div>
-    </md-toolbar>
-    <md-content flex layout-padding>
-      <div ng-view class="body-is-loaded"></div>
-    </md-content>
 
-  <footer></footer>
+
+  <md-toolbar class="md-tall md-accent" layout="column" show-gt-md hide-xs show-md>
+    <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+      <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+    </md-button>
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>{{title}}</span>
+      </h2>
+      <span flex></span>
+    </div>
+  </md-toolbar>
+  <md-content flex layout-padding>
+    <div ng-view class="body-is-loaded"></div>
+  </md-content>
+
+  <footer>
+    <a id="profile-link" href ng-href="/#/"><i class="material-icons">person</i></a>
+    <a id="search-link" href ng-href="/#/search"><i class="material-icons">search</i></a>
+    <a id="inbox-link" href ng-href="/#/inbox"><i class="material-icons">message</i></a>
+  </footer>
   </body>
 
   <!-- Angular Library Resources  -->

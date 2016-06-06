@@ -30,7 +30,6 @@
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
@@ -51,3 +50,4 @@ md-toolbar.md-default-theme.md-hue-2:not(.md-menu-toolbar), md-toolbar.md-hue-2:
   cursor: pointer;
   color: #1464F6;
 }
+
