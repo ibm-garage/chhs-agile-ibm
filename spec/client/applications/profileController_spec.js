@@ -4,10 +4,8 @@ describe('Profile Module', function () {
   var $controller;
   var $scope;
   var element;
-  var name = 'Homer';
 
   beforeEach(module('profileModule'));
-  beforeEach(module('ngStorage'));
 
   beforeEach(function() {
     $scope = {};
@@ -18,12 +16,6 @@ describe('Profile Module', function () {
   });
   
   describe('Profile Controller', function () {
-
-    xit('should contain a $localStorage service', inject(function(
-      $localStorage
-    ) {
-      expect($localStorage).not.to.equal(null);
-    }));
 
     it('has a profile controller', function () {
       expect($scope.data).toEqual('Profile');
@@ -39,6 +31,35 @@ describe('Profile Module', function () {
 
     it('has an address in local storage', function () {
       expect(Object.keys($scope.storage)).toContain('parent_home_address');
+    });
+
+    describe('localStorage Service', function () {
+      it('should contain a $localStorage service', inject(function(
+        $localStorage
+      ) {
+        expect($localStorage).not.toBe(null);
+      }));
+
+      it('$localStorage should contain address', inject(function(
+        $localStorage
+      ) {
+        expect($localStorage.parent_home_address)
+          .toContain('4567 Cedar Avenue, Chula Vista 91910');
+      }));
+
+      it('$localStorage should contain parent home phone', inject(function(
+        $localStorage
+      ) {
+        expect($localStorage.parent_home_phone)
+          .toContain('626-514-1111');
+      }));
+
+      it('$localStorage should contain parent work number', inject(function(
+        $localStorage
+      ) {
+        expect($localStorage.parent_work_number)
+          .toContain('626-514-0000');
+      }));
     });
   });
 
@@ -59,9 +80,8 @@ describe('Profile Module', function () {
       element = angular.element('<div edit-my-profile />');
 
       inject(function ($controller, $rootScope, $compile, $localStorage) {
+        var $controller = $controller('ProfileController', {$scope: $scope});
         var scope = $rootScope.$new();
-        console.log('scope:'+
-          JSON.stringify(scope.storage.parent_home_address));
         $compile(element)(scope);
         scope.$digest();
       });
@@ -69,7 +89,7 @@ describe('Profile Module', function () {
 
     it('has a editmyProfile directive', function(){
       expect(true).toBe(true);
-      //expect(element.find('button')).toContain('Edit');
+      expect(element.find('')).toContain('Edit');
     });
   });
   });
