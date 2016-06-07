@@ -1,9 +1,12 @@
 // Config for protractor tests
+//
+// Runs against local server by default. To run against a staging server:
+// $ export STAGING=http://angular-healthcare-dev.mybluemix.net
+
 const cfenv = require('cfenv');
 const appEnv = cfenv.getAppEnv();
-require('dotenv').config();
 
-var baseUrl = process.env.DEVELOPMENT ? cfenv.getAppEnv().url : process.env.STAGING;
+var baseUrl = process.env.STAGING || cfenv.getAppEnv().url;
 console.log('Testing server at ' + baseUrl);
 
 exports.config = {
