@@ -41,5 +41,6 @@
     "protractor": "^3.1.1",
     "socket.io": "^1.4.6",
     "supertest": "^1.2.0"
-  }
+  },
+  "license": "Apache-2.0"
 }
