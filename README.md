@@ -47,4 +47,4 @@ IBM Continuous Delivery Pipeline for Bluemix is used to automated builds and dep
 ## Setup or used continuous monitoring
  
 The Bluemix platform continuously monitors the health of the application and restarts it if required. It provides tools to view/stream application logs and provides services such as Monitoring and Analytics and Alert Notification, Auto-scaling for handling spikes in traffic, and the use of third party services for external monitoring. These have not been set up for the prototype application but are recommended for production deployments. 
-See: https://www.ibm.com/devops/method/content/manage/practice_automated_monitoring/
+See: https://www.ibm.com/devops/method/content/manage/practice_automated_monitoring
