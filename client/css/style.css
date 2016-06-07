@@ -84,3 +84,10 @@ footer {
 md-dialog {
   width: 39.735em;
 }
+
+md-toast {
+   left: 50%;
+   top:10%;
+   transform: translate3d(-50%, 0, 0);
+   text-align: center;
+}

@@ -3,7 +3,7 @@
 
   var module = angular.module('inboxModule', []);
 
-  module.controller('InboxController', ['$scope', '$mdDialog', function($scope, $mdDialog){
+  module.controller('InboxController', ['$scope', '$mdDialog', '$mdToast', function($scope, $mdDialog, $mdToast){
 
      $scope.inboxData = [
        {title: 'Welcome', from: 'From: Francis'},
@@ -25,8 +25,12 @@
            .cancel('CANCEL');
 
            $mdDialog.show(confirm).then(function() {
-            $scope.status = 'You decided to get rid of your debt.';
-            $scope.abc = confirm._options.title;
+             $mdToast.show(
+                     $mdToast.simple()
+                        .textContent('Message sent')
+                        .position('bottom center')
+                        .hideDelay(3000)
+                  );
           }, function() {
             $scope.status = 'You decided to keep your debt.';
           });
