@@ -5,11 +5,12 @@ describe('Inbox Module', function () {
   var $scope;
 
   beforeEach(module('inboxModule'));
+  beforeEach(module('ngMaterial'));
 
   beforeEach(function() {
     $scope = {};
 
-    inject(function ($controller) {
+    inject(function ($controller, $mdDialog) {
       var $controller = $controller('InboxController', {$scope: $scope});
     })
   });
@@ -32,6 +33,29 @@ describe('Inbox Module', function () {
 
       it('has 2 messages', function () {
         expect($scope.inboxData.length).toEqual(2);
+      });
+    });
+
+    describe('Sent Message', function(){
+
+      it('has message text', function(){
+        expect($scope.sent_message).toBeDefined();
+      });
+
+      it('has a mdDialog', inject(function($mdDialog) {
+        expect($mdDialog).not.toBe(null);
+      }));
+
+      it('has a dialog function', function() {
+        expect($scope.showMessageDialog).toBeDefined();
+      });
+
+      it('mdDialog has a title', function() {
+        expect($scope.sent_message[0].title).toContain('Can you help?');
+      });
+
+      it('mdDialog has a textContent', function() {
+        expect($scope.sent_message[0].body).toContain('Hi Francis, I am struggling to balance everything');
       });
     });
 

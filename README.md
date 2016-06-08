@@ -16,7 +16,7 @@ To install and run the prototype on another machine do the following:
 
 ## Troubleshooting
 
-Tmhe primary source of debugging information for your Bluemix app is the logs. To see them, run the following command using the Cloud Foundry CLI:
+The primary source of debugging information for your Bluemix app is the logs. To see them, run the following command using the Cloud Foundry CLI:
 
   ```
   $ cf logs <application-name> --recent

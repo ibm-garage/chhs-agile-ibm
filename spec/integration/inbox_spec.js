@@ -1,23 +1,7 @@
-var cfenv = require('cfenv');
-require('dotenv').config();
-var host;
-beforeEach(function(){
 
-  //browser.ignoreSynchronization = true;
-
-  if(process.env.DEVELOPMENT) {
-    host = cfenv.getAppEnv().url;
-  } else {
-    host = "http://" + process.env.STAGING;
-  }
-  //console.log('host '+host );
-  browser.get(host + '/');
-});
-
-describe('Messages List', function(){
-
-  beforeEach(function(){
-    browser.get(host + '/#/inbox');
+describe('Inbox', function() {
+  beforeEach(function() {
+    browser.get(browser.baseUrl + '/#/inbox');
   });
 
   it('should load Inbox', function() {
@@ -38,4 +22,7 @@ describe('Messages List', function(){
     expect(element(by.cssContainingText('md-list-item', 'account_circle')).isPresent()).toBe(true);
   });
 
+  xit('has a compose button', function() {
+    expect(element(by.css('.md-raised.md-warn')).isPresent()).toBe(true);
+  });
 });
