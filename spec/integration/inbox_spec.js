@@ -21,8 +21,4 @@ describe('Inbox', function() {
   it('has a profile icon', function() {
     expect(element(by.cssContainingText('md-list-item', 'account_circle')).isPresent()).toBe(true);
   });
-
-  xit('has a compose button', function() {
-    expect(element(by.css('.md-raised.md-warn')).isPresent()).toBe(true);
-  });
 });

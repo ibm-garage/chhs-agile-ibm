@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <div class="edit-profile">
+        <div edit-my-profile />
+    </div>
+
+
+    <div flex layout="column" layout-align="space-around center">
+        <div flex layout="row">
+            <!-- This is the parent information -->
+            <div flex layout="column" layout-align="center center">
+                <img src="client/css/profile.png" ng-show="noneditable" width="150" height="170" />
+            </div>
+            <div flex layout="column" layout-align="center center">
+                <div ng-show="noneditable" class="parent-name md-headline">
+                    Rachel Marie Robins
+                </div>
+                <br>
+                <div class="md-subhead" ng-show="editableFields">
+                    <span class="parent-address">
+                        <span class="md-subhead">{{storage.parent_home_address}}</span>
+                    </span>
+                    <br>
+                    <span class="parent-home-number">
+                      H: {{storage.parent_home_phone}}
+                    </span>
+                    <br>
+                    <span class="parent-phone-number">
+                        W: {{storage.parent_work_number}}
+                    </span>
+                    <i class="material-icons check_mark" ng-show="noneditable" ng-click="editProfile()">mode_edit</i>
+                </div>
+            </div>
+        </div>
+        <div flex layout="column">
+            <div flex layout="row" layout-align="start stretch">
+                <div flex="50" layout="column" ng-show="noneditable" class="blackcolor">
+                        <div class="md-headline caseworker-name">
+                            Case Worker
+                        </div>
+                </div>
+                <div flex="50" layout="column">
+                    <div class="md-subhead">
+                        Francis Romero<br>
+                        951-582-1984<br><br>
+                    </div>
+                </div>
+            </div>
+            <div layout="row" layout-align="space-between">
+                <div flex="50" layout="column">
+                    <br>
+                    <span class="md-subhead child-fullname">
+                        <span class="md-headline">Child</span>
+                    </span>
+                </div>
+                <div flex="50" layout="column" >
+                    <br>
+                    Margaret "Molly" Robins
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

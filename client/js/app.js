@@ -30,7 +30,11 @@ angular.module('myApp', ['ngRoute', 'profileModule',
           title: 'Search',
           templateUrl: 'client/views/applications/facilities.html',
           controller: 'FacilitiesController'
-        });
+        })
+        .when('/mobile_profile', {
+          templateUrl: 'client/views/applications/mobile_profile.html',
+          controller: 'ProfileController'
+      });
   }])
   .run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
