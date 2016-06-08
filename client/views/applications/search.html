@@ -1,14 +1,26 @@
 <div layout="row" layout-align="center center">
     <div class="search">
-      <md-content flex>
-        <label class="md-title">ZIP Code: </label>
-        <md-input-container>
-          <input required type="text" class="zipcodes" ng-model="zipcodes" />
-        </md-input-container>
-        <div class="arrow_forward" style="text-align: right">
-          <i class="material-icons" ng-click="searchZipCodes()">arrow_forward</i>
-        </div>
-      </md-content>
-    </div>
-</div>
+      <form name="myForm">
+        <md-content flex>
+          <label class="md-title">ZIP Code: </label>
+          <md-input-container>
+            <input name="zipcodes" type="text" placeholder="Enter a 5 digit zip code"
+                   ng-pattern="/^[0-9]{5}$/" ng-model="zipcodes" class="zipcodes"
+                   ng-minlength="5" ng-maxlength="5" required md-maxlength="5" ng-required="true" />
+          </md-input-container>
+          <div style="text-align:right">{{zipcodes.$error}}<div>
+          <div ng-messages="myForm.zipcodes.$error" style="color:maroon" role="alert">
+            <div ng-message="required">Zip code is required</div>
+            <div ng-message="pattern">Zip should only contain numbers</div>
+            <div ng-message="maxlength">Zip code should be 5 characters long</div>
+          </div>
 
+          <br>
+          <div class="arrow_forward" style="text-align: right;">
+            <i class="material-icons" ng-click="myForm.$valid && searchZipCodes()">arrow_forward</i>
+          </div>
+        </md-content>
+      </form>
+    </div>
+</form>
+</div>

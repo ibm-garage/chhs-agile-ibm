@@ -16,6 +16,8 @@
       parent_home_phone: "626-514-1111",
       parent_work_number: "626-514-0000"
     };
+
+    //change condition to see if empty
     if(jsonData.indexOf('{}') >=0) {
       $scope.storage.parent_home_address = $scope.profileData.parent_home_address;
       $scope.storage.parent_home_phone = $scope.profileData.parent_home_phone;

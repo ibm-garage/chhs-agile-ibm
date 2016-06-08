@@ -1,8 +1,8 @@
 (function(angular){
   'use strict';
 
-angular.module('myApp', ['ngRoute', 'CertAppModule', 'profileModule',
-    'inboxModule', 'searchModule', 'facilitiesModule', 'ngMaterial'])
+angular.module('myApp', ['ngRoute', 'profileModule',
+    'inboxModule', 'searchModule', 'facilitiesModule', 'ngMaterial', 'ngMessages'])
 
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
@@ -25,14 +25,6 @@ angular.module('myApp', ['ngRoute', 'CertAppModule', 'profileModule',
           title: 'Search',
           templateUrl: 'client/views/applications/facilities.html',
           controller: 'FacilitiesController'
-        })
-        .when('/certificationSelection', {
-            templateUrl: 'client/views/applications/certificationSelection.html',
-            controller: 'NewApplicationController'
-        })
-        .when('/application/new', {
-            templateUrl: 'client/views/applications/newApplication.html',
-            controller: 'NewApplicationController'
         });
   }])
   .run(['$rootScope', function($rootScope) {
@@ -41,4 +33,3 @@ angular.module('myApp', ['ngRoute', 'CertAppModule', 'profileModule',
     });
   }]);
 })(window.angular);
-

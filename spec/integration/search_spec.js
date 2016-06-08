@@ -19,7 +19,7 @@ describe('Search', function() {
 
   it('clicks the search button', function() {
     var zipCodes = element(by.model('zipcodes')).sendKeys('92553');
-    element(by.css('[ng-click="searchZipCodes()"]')).click();
+    element(by.css('[ng-click="myForm.$valid && searchZipCodes()"]')).click();
 
     var address = "12730 HEACOCK ST. SUITE 9";
     expect(element(by.css('.address')).getText()).toContain(address);

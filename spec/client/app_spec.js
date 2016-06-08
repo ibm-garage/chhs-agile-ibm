@@ -12,20 +12,6 @@ describe('App Routes', function() {
     $route = _$route_;
   }));
 
-  describe('New Certification Selection Route', function(){
-    it('Uses the correct Route and Controller', function(){
-        expect($route.routes['/certificationSelection'].controller).toBe('NewApplicationController');
-        expect($route.routes['/certificationSelection'].templateUrl).toBe('client/views/applications/certificationSelection.html');
-    });
-  });
-
-  describe('New Application Route', function(){
-    it('Uses the correct Route and Controller', function(){
-      expect($route.routes['/application/new'].controller).toBe('NewApplicationController');
-      expect($route.routes['/application/new'].templateUrl).toBe('client/views/applications/newApplication.html');
-    });
-  });
-
   describe('New Profile Route', function(){
     it('Uses the correct Route and Controller', function(){
       expect($route.routes['/'].controller).toBe('ProfileController');

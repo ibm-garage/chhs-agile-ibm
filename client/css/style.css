@@ -101,3 +101,10 @@ md-toast {
    transform: translate3d(-50%, 0, 0);
    text-align: center;
 }
+
+.arrow_forward > .material-icons {
+  text-align:center;
+  width: 50px;
+  background:#2196F3;
+  color:white
+}
