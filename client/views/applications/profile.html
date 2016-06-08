@@ -1,70 +1,72 @@
-<div layout="row" layout-align="center center">
 
-<div layout="column">
-  <div class="profile">
-    <div class="edit-profile">
-      <div edit-my-profile />
-    </div>
+<!--Form for editing parent info gets rendered into the div below-->
 
-    <div layout="row">
-      <div layout="column" flex="40">
-          <img src="client/css/profile.png" ng-show="noneditable" width="150" height="170">
+<div class="edit-profile">
+  <div edit-my-profile />
+</div>
+
+<!--Columns for parent, child and caseworker-->
+
+
+<div flex layout="row" layout-align="center center">
+
+  <!--column 1-->
+  <div flex="20" layout="column" layout-align="center center">
+  </div>
+
+  <!--column 2-->
+  <div flex="40" layout="column" layout-align="center center">
+    <div flex layout="row" layout-align="center center">
+      <div flex layout="column" layout-align="center center">
+        <img src="client/css/profile.png" ng-show="noneditable" width="150" height="170" />
       </div>
-      <div layout="column">
-        <div ng-show="noneditable">
-          <div class="parent-name">
-            <h3 class=".md-display-1">Rachel Marie Robins</h3>
-          </div>
+      <div flex layout="column" layout-align="center center">
+        <div ng-show="noneditable" class="parent-name md-headline">
+          Rachel Marie Robins
         </div>
-          <div ng-show="editableFields">
-            <div class="parent-address">
-              <p><h4 class=".md-title">{{storage.parent_home_address}} </h4></p>
-            </div>
-            <div class="parent-home-number">
-              H: {{storage.parent_home_phone}}
-            </div>
-            <div class="parent-phone-number">
-              W: {{storage.parent_work_number}}
-            </div>
-          </div>
-      </div>
+        <br>
+        <div class="md-subhead" ng-show="editableFields">
+          <span class="parent-address">
+            <span class="md-subhead">
+              {{storage.parent_home_address}}
+            </span>
+          </span><br>
+          <span class="parent-home-number">
+            H: {{storage.parent_home_phone}}
+          </span><br>
+          <span class="parent-phone-number">
+            W: {{storage.parent_work_number}}
+            <i class="material-icons check_mark"
+               ng-show="noneditable" ng-click="editProfile()">mode_edit</i>
+          </span>
+        </div>
 
-      <div layout="column">
-        <i class="material-icons" ng-show="noneditable" class="check_mark" ng-click="editProfile()">mode_edit</i>
         <i class="material-icons" ng-hide="editableFields" ng-click="editProfile()">check</i>
       </div>
     </div>
+  </div>
 
-
-
-    <div ng-show="noneditable">
-      <hr>
-      <div layout="row">
-        <div layout="column" flex="40">
-          <div class="caseworker-name">
-            <h4 class=".md-headline">Case Worker</h4>
-          </div>
-        </div>
-
-        <div layout="column">
-          Francis Romero<br>
-          951-582-1984
-        </div>
+  <!--column 3-->
+  <div flex="20" layout="column" layout-align="center center" class="caseworker">
+    <div ng-show="noneditable" class="blackcolor">
+      <div class="md-headline caseworker-name">
+        Case Worker
       </div>
 
-      <br>
-      <div layout="row">
-        <div layout="column" flex="40">
-          <div class="child-fullname">
-            <h4 class=".md-headline">Child</h4>
-          </div>
-        </div>
-
-        <div layout="column">
-          Margaret <div class="child-pref-name">"Molly"</div> Robins
-        </div>
+      <div class="md-subhead">
+        Francis Romero<br>
+        951-582-1984<br><br>
       </div>
+
+      <!--Child Info-->
+      <span class="md-subhead child-fullname">
+        <span class="md-headline">Child</span>
+      </span><br>
+      Margaret<span class="child-pref-name"> "Molly" </span>Robins
     </div>
   </div>
-</div>
+
+  <!--column 4-->
+  <div flex="20" layout="column" layout-align="center center">
   </div>
+</div>

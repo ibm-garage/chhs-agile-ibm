@@ -46,9 +46,10 @@ md-toolbar.md-default-theme.md-hue-2:not(.md-menu-toolbar), md-toolbar.md-hue-2:
   color: #1464F6;
 }
 
-.check_mark {
+.material-icons.check_mark {
   cursor: pointer;
   color: #1464F6;
+  padding-left: 30px;
 }
 
 md-card {
@@ -77,3 +78,11 @@ footer {
   width: 100%;
 }
 
+.caseworker {
+  border-left: 3px solid;
+  color: lightgray;
+}
+
+.blackcolor {
+  color: black;
+}
