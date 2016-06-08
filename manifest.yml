@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: angular-healthcare
-  host: angular-healthcare
+  name: chhs-agile-ibm
+  host: chhs-agile-ibm
   disk_quota: 1024M
