@@ -40,9 +40,15 @@ describe('App Routes', function() {
     });
   });
 
-  describe('New Facilities Route', function(){
+  describe('Mobile Profile Route', function(){
     it('Uses the correct Route and Controller', function(){
       expect($route.routes['/mobile_profile'].templateUrl).toBe('client/views/applications/mobile_profile.html');
+    });
+  });
+
+  describe('Desktop Profile Route', function(){
+    it('Uses the correct Route and Controller', function(){
+      expect($route.routes['/desktop_profile'].templateUrl).toBe('client/views/applications/desktop_profile.html');
     });
   });
 });

@@ -34,7 +34,11 @@ angular.module('myApp', ['ngRoute', 'profileModule',
         .when('/mobile_profile', {
           templateUrl: 'client/views/applications/mobile_profile.html',
           controller: 'ProfileController'
-      });
+        })
+        .when('/desktop_profile', {
+            templateUrl: 'client/views/applications/desktop_profile.html',
+            controller: 'ProfileController'
+        });
   }])
   .run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
