@@ -11,6 +11,11 @@ angular.module('myApp', ['ngRoute', 'profileModule',
           templateUrl: 'client/views/applications/profile.html',
           controller: 'ProfileController'
         })
+        .when('/profile', {
+          title: 'Profile',
+          templateUrl: 'client/views/applications/profile.html',
+          controller: 'ProfileController'
+        })
         .when('/inbox', {
           title: 'Inbox',
           templateUrl: 'client/views/applications/inbox.html',

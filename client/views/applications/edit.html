@@ -1,30 +1,41 @@
 <div layout="row" layout-align="center center">
-
   <div layout="column">
-  <div ng-hide="editableValue">
-    <md-content class="md-no-momentum">
-      <div layout="row">
-      <i class="material-icons" style="color: #2196F3">person</i>
-      <md-input-container class="md-icon-float md-block">
-        <label>Name</label>
-        <input ng-model="viewAddress" type="text" ng-required="true">
-      </md-input-container>
-      </div>
-      <div layout="row">
-        <i class="material-icons">phone</i>
-      <md-input-container md-no-float class="md-block">
-        <label>Home Phone Number</label>
-        <input ng-model="viewHomePhone" type="text" placeholder="Phone Number" ng-required="true">
-      </md-input-container>
+    <div ng-hide="editableValue">
+      <md-content class="md-no-momentum">
+        <div layout="row" class="row-edit">
+          <i class="material-icons" style="color: #2196F3">person</i>
+          <md-input-container class="md-icon-float md-block">
+            <label>Name</label>
+            <input class="txtWidth" ng-model="viewAddress" type="text" ng-required="true">
+          </md-input-container>
         </div>
-      <div layout="row">
-        <i class="material-icons">phone</i>
-      <md-input-container class="md-block">
-        <label>Work Phone Number</label>
-        <input ng-model="viewWorkPhone" type="text" placeholder="Phone Number" ng-required="true">
-      </md-input-container>
+        <div layout="row" class="row-edit">
+          <i class="material-icons">phone</i>
+          <md-input-container md-no-float class="md-block">
+            <label>Home Phone Number</label>
+            <input class="txtWidth" ng-model="viewHomePhone" type="text" placeholder="Phone Number" ng-required="true">
+          </md-input-container>
         </div>
-    </md-content>
+        <div layout="row" class="row-edit">
+          <i class="material-icons">phone</i>
+          <md-input-container class="md-block">
+            <label>Work Phone Number</label>
+            <input class="txtWidth" ng-model="viewWorkPhone" type="text"
+                  placeholder="Phone Number" ng-required="true">
+          </md-input-container>
+        </div>
+        <div layout="row" layout-align="space-between end">
+          <div layout="column">
+            <a style="color:white" ng-href="/#/profile">
+              <i class="material-icons edit-check">arrow_back</i>
+            </a>
+          </div>
+          <div layout="column">
+            <i class="material-icons edit-check" ng-hide="editableFields"
+              ng-click="editProfile()">check</i>
+          </div>
+        </div>
+      </md-content>
+    </div>
   </div>
-</div>
 </div>
