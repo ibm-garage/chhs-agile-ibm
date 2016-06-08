@@ -30,6 +30,21 @@ angular.module('myApp', ['ngRoute', 'profileModule',
   .run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
       $rootScope.title = current.$$route.title;
+      $rootScope.changeColor = function(val) {
+        if(val === 'profile') {
+          $rootScope.profileColor = "#083d66";
+          $rootScope.searchColor = '';
+          $rootScope.inboxColor = '';
+        } else if(val === 'search') {
+          $rootScope.profileColor = '';
+          $rootScope.searchColor = '#083d66';
+          $rootScope.inboxColor = '';
+        } else if(val === 'inbox') {
+          $rootScope.profileColor = '';
+          $rootScope.searchColor = '';
+          $rootScope.inboxColor = '#083d66';
+        }
+      };
     });
   }]);
 })(window.angular);

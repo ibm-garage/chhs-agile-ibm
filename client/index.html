@@ -20,19 +20,21 @@
       <span flex></span>
 
       <div hide-xs>
-        <md-button class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
-          <i class="material-icons">person</i>
+        <md-button ng-style="{'color': profileColor}" ng-click="changeColor('profile')"
+          class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
+          <i class="material-icons">account_circle</i>
         </md-button>
-        <md-button class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
+        <md-button ng-style="{'color': searchColor}" ng-click="changeColor('search')"
+          class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
           <i class="material-icons">search</i>
         </md-button>
-        <md-button class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
+        <md-button ng-style="{'color': inboxColor}" ng-click="changeColor('inbox')"
+          class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
           <i class="material-icons">message</i>
         </md-button>
       </div>
     </div>
   </md-toolbar>
-
   <div class="body-is-loaded">
   <md-content flex layout-padding>
     <div ng-view body-is-loaded></div>
@@ -45,17 +47,20 @@
       <md-toolbar class="md-hue-2" layout="column" hide-gt-xs>
         <div class="md-toolbar-tools">
           <span flex="35" layout="column" layout-align="center center">
-            <md-button class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
+            <md-button ng-style="{'color': profileColor}" ng-click="changeColor('profile')"
+              class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
               <i class="material-icons">person</i>
             </md-button>
           </span>
           <span flex="30" layout="column" layout-align="center center">
-            <md-button class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
+            <md-button ng-style="{'color': searchColor}" ng-click="changeColor('search')"
+              class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
               <i class="material-icons">search</i>
             </md-button>
           </span>
           <span flex="35" layout="column" layout-align="center center">
-            <md-button class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
+            <md-button ng-style="{'color': inboxColor}" ng-click="changeColor('inbox')"
+              class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
               <i class="material-icons">message</i>
             </md-button>
           </span>
