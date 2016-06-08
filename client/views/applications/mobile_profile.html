@@ -11,7 +11,7 @@
     </div>
 
 
-    <div flex layout="column" layout-align="space-around center">
+    <div flex layout="column" hide-gt-md layout-align="space-around center">
         <div flex layout="row">
             <!-- This is the parent information -->
             <div flex layout="column" layout-align="center center">
@@ -40,10 +40,10 @@
             </div>
         </div>
         <br>
-        <div flex layout="column" class="mobile-caseworker">
+        <div flex layout="column" class="mobile-caseworker" ng-show="noneditable">
             <br>
             <div flex layout="row" class="blackcolor">
-                <div flex="50" layout="column"  ng-show="noneditable" class="blackcolor">
+                <div flex="50" layout="column" class="blackcolor">
                     <span layout="row" layout-align="start" class="md-headline caseworker-name">
                             Case Worker
                     </span>
