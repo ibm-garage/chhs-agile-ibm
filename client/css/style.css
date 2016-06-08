@@ -83,6 +83,11 @@ footer {
   color: lightgray;
 }
 
+.mobile-caseworker {
+  border-top: 3px solid;
+  color: lightgray;
+}
+
 .blackcolor {
   color: black;
 }

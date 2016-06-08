@@ -15,7 +15,8 @@
         <div flex layout="row">
             <!-- This is the parent information -->
             <div flex layout="column" layout-align="center center">
-                <img src="client/css/profile.png" ng-show="noneditable" width="150" height="170" />
+                <img src="client/css/profile.png" ng-show="noneditable"
+                     width="130" height="150" />
             </div>
             <div flex layout="column" layout-align="center center">
                 <div ng-show="noneditable" class="parent-name md-headline">
@@ -38,12 +39,14 @@
                 </div>
             </div>
         </div>
-        <div flex layout="column">
-            <div flex layout="row" layout-align="start stretch">
-                <div flex="50" layout="column" ng-show="noneditable" class="blackcolor">
-                        <div class="md-headline caseworker-name">
+        <br>
+        <div flex layout="column" class="mobile-caseworker">
+            <br>
+            <div flex layout="row" class="blackcolor">
+                <div flex="50" layout="column"  ng-show="noneditable" class="blackcolor">
+                    <span layout="row" layout-align="start" class="md-headline caseworker-name">
                             Case Worker
-                        </div>
+                    </span>
                 </div>
                 <div flex="50" layout="column">
                     <div class="md-subhead">
@@ -52,7 +55,8 @@
                     </div>
                 </div>
             </div>
-            <div layout="row" layout-align="space-between">
+
+            <div layout="row" layout-align="space-between" class="blackcolor">
                 <div flex="50" layout="column">
                     <br>
                     <span class="md-subhead child-fullname">
