@@ -13,7 +13,7 @@ describe('Search', function() {
   });
 
   it('finds the search button', function() {
-    var myEle = element(by.id('arrow-forward'));
-    expect(myEle.isPresent()).toBe(true);
+    expect(element(by.tagName('md-icon')).isPresent()).toBe(true);
   });
+
 });

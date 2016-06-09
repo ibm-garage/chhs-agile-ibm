@@ -19,7 +19,7 @@ describe('Inbox', function() {
   });
 
   it('has a profile icon', function() {
-    expect(element(by.id('profile-icon')).isPresent()).toBe(true);
+    expect(element(by.tagName('md-icon')).isPresent()).toBe(true);
   });
 
   describe('shows body', function() {
