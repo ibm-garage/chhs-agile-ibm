@@ -35,6 +35,7 @@
       restrict: "A",
       templateUrl: 'client/views/applications/edit.html',
       link: function(scope, element, attrs, localStorage) {
+
         scope.editableValue = true;
         scope.viewAddress = scope.storage.parent_home_address;
         scope.viewHomePhone = scope.storage.parent_home_phone;

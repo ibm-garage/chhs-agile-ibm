@@ -6,8 +6,8 @@
   module.controller('InboxController', ['$scope', '$mdDialog', '$mdToast', function($scope, $mdDialog, $mdToast){
 
      $scope.inboxData = [
-       {title: 'Welcome', from: 'From: Francis', body: 'Hello Rachel,\nWelcome to your Child Healthcare Services online profile.\nLet me know if I can help you in any way.\nSincerely, Rachel'},
-       {title: 'New data you\'ll find useful', from: 'From: Francis', body: 'Hello Rachel, We found a few Facilities in your zipcode. Click on the search button at the top right to explore and try searching for facilities in your zip code.  Let me know if you need any help or have any questions.  Sincerely Rachel'}
+       {title: 'Welcome', from: 'From: Francis', body: 'Hello Rachel,\nWelcome to your Child Healthcare Services online profile.\nLet me know if I can help you in any way.\nSincerely, Francis'},
+       {title: 'New data you\'ll find useful', from: 'From: Francis', body: 'Hello Rachel, We found a few Facilities in your zipcode. Click on the search button at the top right to explore and try searching for facilities in your zip code.  Let me know if you need any help or have any questions.  Sincerely, Francis'}
      ];
 
      $scope.sent_message = [
