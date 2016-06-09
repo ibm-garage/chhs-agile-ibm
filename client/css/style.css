@@ -153,3 +153,8 @@ input.txtWidth {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
+/* Padding to navbar top */
+.paddingtop {
+  padding-top:10px;
+}
