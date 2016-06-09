@@ -13,7 +13,7 @@ describe('Search', function() {
   });
 
   it('finds the search button', function() {
-    var myEle = element(by.id('arrow-forward'));
+    var myEle = element(by.css('.arrow-forward'));
     expect(myEle.isPresent()).toBe(true);
   });
 });
