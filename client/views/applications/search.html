@@ -10,7 +10,7 @@
                    ng-keyup="$event.keyCode == 13 && myForm.$valid && searchZipCodes()" />
           </md-input-container>
           <div ng-cloak style="text-align:right">{{zipcodes.$error}}</div>
-          <div ng-messages="myForm.zipcodes.$error" style="color:maroon" role="alert">
+          <div ng-messages="myForm.zipcodes.$error" style="color:maroon; text-align:right" role="alert">
             <div ng-message="required">Zip code is required</div>
             <div ng-message="pattern">Zip should only contain numbers</div>
             <div ng-message="maxlength">Zip code should be 5 characters long</div>

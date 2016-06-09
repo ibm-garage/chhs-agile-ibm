@@ -22,10 +22,10 @@
         </md-content>
       </div>
 
-      <div layout="column"  layout-align="center center">
-        <div layout="row">{{noFacilities}}</div><br>
-        <div layout="row"">
-          <a style="color:white" ng-href="/#/search" class="arrow_forward">
+      <div layout="column" layout-align="center center">
+        <div layout="row" ng-cloak>{{noFacilities}}</div><br>
+        <div layout="row">
+          <a style="color:white" ng-href="/#/search" ng-cloak class="arrow_forward">
             <md-icon md-svg-src="client/icons/arrow_back.svg" ng-cloak class="material-icons" aria-label="Go back"></md-icon>
           </a>
         </div>
