@@ -31,8 +31,8 @@
               </span><br>
               <span ng-cloak class="parent-phone-number">
                 W: {{storage.parent_work_number}}
-                <i ng-cloak class="material-icons check_mark"
-                   ng-show="noneditable" ng-click="editProfile()">mode_edit</i>
+                  <md-icon md-svg-src="client/icons/mode_edit.svg" ng-cloak class="material-icons check_mark"
+                           ng-style="{'color': profileColor}" aria-label="Edit Profile" ng-show="noneditable" ng-click="editProfile()"></md-icon>
               </span>
                 </div>
             </div>

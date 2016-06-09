@@ -12,7 +12,6 @@
   <body>
 
   <md-toolbar class="md-hue-2" layout="column">
-
     <div class="md-toolbar-tools">
       <h2>
         <span ng-cloak>{{title}}</span>
@@ -20,17 +19,21 @@
       <span flex></span>
 
       <div hide-xs>
-        <md-button ng-cloak ng-style="{'color': profileColor}" ng-click="changeColor('profile')"
-          class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
-          <i ng-cloak class="material-icons">account_circle</i>
+        <md-button ng-cloak ng-click="changeColor('profile')"
+                    class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
+          <md-icon md-svg-src="client/icons/account_circle.svg" ng-cloak
+                   ng-style="{'color': profileColor}" aria-label="Profile"></md-icon>
         </md-button>
-        <md-button ng-cloak ng-style="{'color': searchColor}" ng-click="changeColor('search')"
+        <md-button ng-cloak  ng-click="changeColor('search')"
           class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
-          <i ng-cloak class="material-icons">search</i>
+
+          <md-icon md-svg-src="client/icons/search.svg" ng-cloak
+                   ng-style="{'color': searchColor}" aria-label="Search"></md-icon>
         </md-button>
-        <md-button ng-style="{'color': inboxColor}" ng-click="changeColor('inbox')"
+        <md-button  ng-click="changeColor('inbox')"
           class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
-          <i ng-cloak class="material-icons">message</i>
+          <md-icon md-svg-src="client/icons/message.svg" ng-cloak
+                   ng-style="{'color': inboxColor}" aria-label="Inbox"></md-icon>
         </md-button>
       </div>
     </div>
@@ -47,21 +50,25 @@
       <md-toolbar class="md-hue-2" layout="column" hide-gt-xs>
         <div class="md-toolbar-tools">
           <span class="btn-span" flex="35" layout="column" layout-align="center center">
-            <md-button ng-cloak ng-style="{'color': profileColor}" ng-click="changeColor('profile')"
-              class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
-              <i ng-cloak class="material-icons">person</i>
+            <md-button ng-cloak ng-click="changeColor('profile')"
+                       class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
+              <md-icon md-svg-src="client/icons/account_circle.svg" ng-cloak
+                       ng-style="{'color': profileColor}" aria-label="Profile"></md-icon>
             </md-button>
           </span>
           <span class="btn-span" flex="30" layout="column" layout-align="center center">
-            <md-button ng-cloak ng-style="{'color': searchColor}" ng-click="changeColor('search')"
-              class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
-              <i ng-cloak class="material-icons">search</i>
+            <md-button ng-cloak  ng-click="changeColor('search')"
+                       class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
+
+              <md-icon md-svg-src="client/icons/search.svg" ng-cloak
+                       ng-style="{'color': searchColor}" aria-label="Search"></md-icon>
             </md-button>
           </span>
           <span class="btn-span" flex="35" layout="column" layout-align="center center">
-            <md-button ng-cloak ng-style="{'color': inboxColor}" ng-click="changeColor('inbox')"
-              class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
-              <i ng-cloak class="material-icons">message</i>
+            <md-button  ng-click="changeColor('inbox')"
+                        class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
+              <md-icon md-svg-src="client/icons/message.svg" ng-cloak
+                       ng-style="{'color': inboxColor}" aria-label="Inbox"></md-icon>
             </md-button>
           </span>
           </div>
@@ -79,8 +86,6 @@
   <script src="node_modules/angular-material/angular-material.min.js"></script>
   <script src="node_modules/angular-messages/angular-messages.min.js"></script>
   <script src="node_modules/ngstorage/ngStorage.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
 
   <!-- Application Resources -->
   <script src="client/js/app.js"></script>

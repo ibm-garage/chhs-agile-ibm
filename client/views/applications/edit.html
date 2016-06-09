@@ -3,21 +3,22 @@
     <div ng-hide="editableValue">
       <md-content class="md-no-momentum">
         <div layout="row" class="row-edit">
-          <i class="material-icons" style="color: #2196F3">person</i>
+          <md-icon md-svg-src="client/icons/person.svg" ng-cloak class="material-icons" aria-label="Address"></md-icon>
           <md-input-container class="md-icon-float md-block">
             <label>Name</label>
             <input class="txtWidth" ng-model="viewAddress" type="text" ng-required="true">
           </md-input-container>
         </div>
         <div layout="row" class="row-edit">
-          <i ng-cloak class="material-icons">phone</i>
+
+          <md-icon md-svg-src="client/icons/phone.svg" ng-cloak class="material-icons" aria-label="Home Phone"></md-icon>
           <md-input-container md-no-float class="md-block">
             <label>Home Phone Number</label>
             <input class="txtWidth" ng-model="viewHomePhone" type="text" placeholder="Phone Number" ng-required="true">
           </md-input-container>
         </div>
         <div layout="row" class="row-edit">
-          <i ng-cloak class="material-icons">phone</i>
+          <md-icon md-svg-src="client/icons/phone.svg" ng-cloak class="material-icons" aria-label="Work Phone"></md-icon>
           <md-input-container class="md-block">
             <label>Work Phone Number</label>
             <input class="txtWidth" ng-model="viewWorkPhone" type="text"
@@ -26,13 +27,13 @@
         </div>
         <div layout="row" layout-align="space-between end">
           <div layout="column">
-            <a style="color:white" ng-href="/#/profile">
-              <i ng-cloak class="material-icons edit-check">arrow_back</i>
+            <a style="color:white" ng-href="/#/profile" class="arrow_forward">
+              <md-icon md-svg-src="client/icons/arrow_back.svg" ng-cloak class="material-icons" aria-label="Go back"></md-icon>
             </a>
           </div>
-          <div layout="column">
-            <i ng-cloak class="material-icons edit-check" ng-hide="editableFields"
-              ng-click="editProfile()">check</i>
+          <div layout="column" class="arrow_forward">
+            <md-icon md-svg-src="client/icons/check.svg" ng-cloak class="material-icons" ng-hide="editableFields"
+                     aria-label="Go back" ng-click="editProfile()"></md-icon>
           </div>
         </div>
       </md-content>

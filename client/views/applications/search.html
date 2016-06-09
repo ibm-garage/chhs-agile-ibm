@@ -9,7 +9,7 @@
                    ng-minlength="5" ng-maxlength="5" required md-maxlength="5" ng-required="true"
                    ng-keyup="$event.keyCode == 13 && myForm.$valid && searchZipCodes()" />
           </md-input-container>
-          <div ng-cloak style="text-align:right">{{zipcodes.$error}}<div>
+          <div ng-cloak style="text-align:right">{{zipcodes.$error}}</div>
           <div ng-messages="myForm.zipcodes.$error" style="color:maroon" role="alert">
             <div ng-message="required">Zip code is required</div>
             <div ng-message="pattern">Zip should only contain numbers</div>
@@ -18,10 +18,10 @@
 
           <br>
           <div class="arrow_forward" style="text-align: right;">
-            <i ng-cloak class="material-icons" ng-click="myForm.$valid && searchZipCodes()">arrow_forward</i>
+              <md-icon id="arrow-forward" md-svg-src="client/icons/arrow_forward.svg" ng-cloak class="material-icons"
+                       ng-click="myForm.$valid && searchZipCodes()" aria-label="Search ZipCode"></md-icon>
           </div>
         </md-content>
       </form>
     </div>
-</form>
 </div>
