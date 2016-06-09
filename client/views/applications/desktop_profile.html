@@ -1,9 +1,5 @@
 <!--Form for editing parent info gets rendered into the div below-->
 
-<div class="edit-profile">
-    <div edit-my-profile />
-</div>
-
 <div  hide-xs hide-sm flex layout="row" layout-align="center centre">
 
     <!--column 1-->
@@ -13,34 +9,34 @@
     <div flex="40" layout="column" layout-align="center center">
         <div flex layout="row" layout-align="center center">
             <div flex layout="column" layout-align="center center">
-                <img src="client/css/profile.png" ng-show="noneditable" width="150" height="170" />
+                <img src="client/css/profile.png" ng-show="showProfile" width="150" height="170" />
             </div>
             <div flex layout="column" layout-align="center center">
-                <div ng-show="noneditable" class="parent-name md-headline">
+                <div ng-show="showProfile" class="parent-name md-headline">
                     Rachel Marie Robins
                 </div>
                 <br>
-                <div class="md-subhead" ng-show="editableFields">
-              <span class="parent-address">
-                <span ng-cloak class="md-subhead">
-                  {{storage.parent_home_address}}
-                </span>
-              </span><br>
-              <span ng-cloak class="parent-home-number">
-                H: {{storage.parent_home_phone}}
-              </span><br>
-              <span ng-cloak class="parent-phone-number">
-                W: {{storage.parent_work_number}}
-                  <md-icon md-svg-src="client/icons/mode_edit.svg" ng-cloak class="material-icons check_mark"
-                           ng-style="{'color': profileColor}" aria-label="Edit Profile" ng-show="noneditable" ng-click="editProfile()"></md-icon>
-              </span>
+                <div class="md-subhead" ng-show="editMyProfile">
+                  <span class="parent-address">
+                    <span ng-cloak class="md-subhead">
+                      {{storage.parent_home_address}}
+                    </span>
+                  </span><br>
+                  <span ng-cloak class="parent-home-number">
+                    H: {{storage.parent_home_phone}}
+                  </span><br>
+                  <span ng-cloak class="parent-phone-number">
+                    W: {{storage.parent_work_number}}
+                      <md-icon md-svg-src="client/icons/mode_edit.svg" ng-cloak class="material-icons check_mark"
+                               ng-style="{'color': profileColor}" aria-label="Edit Profile" ng-show="showProfile" ng-click="editProfile()"></md-icon>
+                  </span>
                 </div>
             </div>
         </div>
     </div>
     <!--column 3-->
     <div class="caseworker" flex layout="column" layout-align="center center">
-        <div ng-show="noneditable" class="blackcolor">
+        <div ng-show="showProfile" class="blackcolor">
             <div class="md-headline caseworker-name">
                 Case Worker
             </div>

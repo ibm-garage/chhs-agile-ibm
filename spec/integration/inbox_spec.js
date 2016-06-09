@@ -17,7 +17,7 @@ describe('Inbox', function() {
     var inbox_list = element.all(by.repeater('inbox in inboxData'));
     expect(inbox_list.get(0).getText()).toContain('Welcome\nFrom: Francis');
   });
-  
+
   describe('shows body', function() {
     it('should render list of message body', function() {
       var inbox_list = element.all(by.repeater('inbox in inboxData'));

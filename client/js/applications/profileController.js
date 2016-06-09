@@ -6,10 +6,11 @@
   module.controller('ProfileController', ['$scope', '$localStorage', function($scope, $localStorage){
     $scope.data = "Profile";
     $scope.storage = $localStorage;
-    $scope.noneditable = true;
-    $scope.editableFields = true;
+    $scope.showProfile = true;
+    $scope.editMyProfile = true;
     $scope.storage.parent_home_address;
 
+    // Local Storage Initialization
     var jsonData = JSON.stringify($scope.storage);
     $scope.profileData = {
       parent_home_address: "4567 Cedar Avenue, Chula Vista 91910",
@@ -46,12 +47,12 @@
 
           if(scope.editableValue == true) {
             scope.editableValue = false;
-            scope.noneditable = false;
-            scope.editableFields = false;
+            scope.showProfile = false;
+            scope.editMyProfile = false;
           } else {
             scope.editableValue = true;
-            scope.noneditable = true;
-            scope.editableFields = true;
+            scope.showProfile = true;
+            scope.editMyProfile = true;
           }
         };
       }
