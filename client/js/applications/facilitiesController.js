@@ -12,7 +12,12 @@
             + $scope.storage.zipcode;
     $http.get(url)
     .success(function(data) {
-      $scope.showFacilities = data;
+        if(data == '') {
+          $scope.noFacilities = 'Your search found no facilities. ' +
+            ' Please try another nearby zip code.';
+        } else {
+          $scope.showFacilities = data;
+        }
     })
     .error(function(err) {
       console.log('err: '+ err);
