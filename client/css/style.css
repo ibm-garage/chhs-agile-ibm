@@ -145,6 +145,11 @@ input.txtWidth {
   font-size: 1.8em;
 }
 
+.small-padding{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
