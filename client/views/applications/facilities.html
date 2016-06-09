@@ -7,8 +7,8 @@
           <md-card>
             <md-card-title>
               <md-card-title-text>
-                <span class="md-headline" >{{facility.facility_name}}</span>
-                  <span class="md-headline small-title">
+                <span ng-cloak class="md-headline" >{{facility.facility_name}}</span>
+                  <span ng-cloak class="md-headline small-title">
                     {{facility.facility_address}}<br>
                     {{facility.location_city}}, {{facility.location_state}} {{facility.location_zip}}
                   </span>
@@ -16,7 +16,7 @@
             </md-card-title>
 
             <md-card-footer>
-              <span class="md-headline">{{facility.facility_telephone_number}}</span>
+              <span ng-cloak class="md-headline">{{facility.facility_telephone_number}}</span>
             </md-card-footer>
           </md-card>
         </md-content>

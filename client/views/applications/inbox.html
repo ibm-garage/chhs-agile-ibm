@@ -7,11 +7,11 @@
           <md-list-item class="md-3-line" ng-repeat="inbox in inboxData"
                   ng-click="showMessage($event, inbox.title, inbox.from, inbox.body)">
             <div class="md-avatar">
-              <i class="material-icons" style="width: 48px;margin: 16px;border-radius: 48px">account_circle</i>
+              <i ng-cloak class="material-icons" style="width: 48px;margin: 16px;border-radius: 48px">account_circle</i>
             </div>
             <div class="md-list-item-text">
               <h3>{{inbox.title}}</h3>
-              <p>
+              <p ng-cloak>
                 {{inbox.from}}
               </p>
             </div>
@@ -19,7 +19,7 @@
           </md-list-item>
         </md-list>
         <md-button class="md-raised md-warn" ng-click="showMessageDialog($event)">
-          <i class="material-icons">mode_edit</i>Compose
+          <i ng-cloak class="material-icons">mode_edit</i>Compose
         </md-button>
       </md-content>
       </div>

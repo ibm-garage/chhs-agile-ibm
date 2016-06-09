@@ -22,16 +22,16 @@
                 <br>
                 <div class="md-subhead" ng-show="editableFields">
               <span class="parent-address">
-                <span class="md-subhead">
+                <span ng-cloak class="md-subhead">
                   {{storage.parent_home_address}}
                 </span>
               </span><br>
-              <span class="parent-home-number">
+              <span ng-cloak class="parent-home-number">
                 H: {{storage.parent_home_phone}}
               </span><br>
-              <span class="parent-phone-number">
+              <span ng-cloak class="parent-phone-number">
                 W: {{storage.parent_work_number}}
-                <i class="material-icons check_mark"
+                <i ng-cloak class="material-icons check_mark"
                    ng-show="noneditable" ng-click="editProfile()">mode_edit</i>
               </span>
                 </div>

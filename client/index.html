@@ -15,22 +15,22 @@
 
     <div class="md-toolbar-tools">
       <h2>
-        <span>{{title}}</span>
+        <span ng-cloak>{{title}}</span>
       </h2>
       <span flex></span>
 
       <div hide-xs>
-        <md-button ng-style="{'color': profileColor}" ng-click="changeColor('profile')"
+        <md-button ng-cloak ng-style="{'color': profileColor}" ng-click="changeColor('profile')"
           class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
-          <i class="material-icons">account_circle</i>
+          <i ng-cloak class="material-icons">account_circle</i>
         </md-button>
-        <md-button ng-style="{'color': searchColor}" ng-click="changeColor('search')"
+        <md-button ng-cloak ng-style="{'color': searchColor}" ng-click="changeColor('search')"
           class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
-          <i class="material-icons">search</i>
+          <i ng-cloak class="material-icons">search</i>
         </md-button>
         <md-button ng-style="{'color': inboxColor}" ng-click="changeColor('inbox')"
           class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
-          <i class="material-icons">message</i>
+          <i ng-cloak class="material-icons">message</i>
         </md-button>
       </div>
     </div>
@@ -47,21 +47,21 @@
       <md-toolbar class="md-hue-2" layout="column" hide-gt-xs>
         <div class="md-toolbar-tools">
           <span class="btn-span" flex="35" layout="column" layout-align="center center">
-            <md-button ng-style="{'color': profileColor}" ng-click="changeColor('profile')"
+            <md-button ng-cloak ng-style="{'color': profileColor}" ng-click="changeColor('profile')"
               class="md-icon-button" aria-label="Person" flex href ng-href="/#/">
-              <i class="material-icons">person</i>
+              <i ng-cloak class="material-icons">person</i>
             </md-button>
           </span>
           <span class="btn-span" flex="30" layout="column" layout-align="center center">
-            <md-button ng-style="{'color': searchColor}" ng-click="changeColor('search')"
+            <md-button ng-cloak ng-style="{'color': searchColor}" ng-click="changeColor('search')"
               class="md-icon-button" aria-label="Search" flex href ng-href="/#/search">
-              <i class="material-icons">search</i>
+              <i ng-cloak class="material-icons">search</i>
             </md-button>
           </span>
           <span class="btn-span" flex="35" layout="column" layout-align="center center">
-            <md-button ng-style="{'color': inboxColor}" ng-click="changeColor('inbox')"
+            <md-button ng-cloak ng-style="{'color': inboxColor}" ng-click="changeColor('inbox')"
               class="md-icon-button" aria-label="Message" flex href ng-href="/#/inbox">
-              <i class="material-icons">message</i>
+              <i ng-cloak class="material-icons">message</i>
             </md-button>
           </span>
           </div>

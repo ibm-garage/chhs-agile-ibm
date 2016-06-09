@@ -10,14 +10,14 @@
           </md-input-container>
         </div>
         <div layout="row" class="row-edit">
-          <i class="material-icons">phone</i>
+          <i ng-cloak class="material-icons">phone</i>
           <md-input-container md-no-float class="md-block">
             <label>Home Phone Number</label>
             <input class="txtWidth" ng-model="viewHomePhone" type="text" placeholder="Phone Number" ng-required="true">
           </md-input-container>
         </div>
         <div layout="row" class="row-edit">
-          <i class="material-icons">phone</i>
+          <i ng-cloak class="material-icons">phone</i>
           <md-input-container class="md-block">
             <label>Work Phone Number</label>
             <input class="txtWidth" ng-model="viewWorkPhone" type="text"
@@ -27,11 +27,11 @@
         <div layout="row" layout-align="space-between end">
           <div layout="column">
             <a style="color:white" ng-href="/#/profile">
-              <i class="material-icons edit-check">arrow_back</i>
+              <i ng-cloak class="material-icons edit-check">arrow_back</i>
             </a>
           </div>
           <div layout="column">
-            <i class="material-icons edit-check" ng-hide="editableFields"
+            <i ng-cloak class="material-icons edit-check" ng-hide="editableFields"
               ng-click="editProfile()">check</i>
           </div>
         </div>
