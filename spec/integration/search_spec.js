@@ -12,8 +12,4 @@ describe('Search', function() {
     expect(element(by.css('.zipcodes')).isPresent()).toBe(true);
   });
 
-  it('finds the search button', function() {
-    expect(element(by.tagName('md-icon')).isPresent()).toBe(true);
-  });
-
 });
