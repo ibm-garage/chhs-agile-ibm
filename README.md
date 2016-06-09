@@ -8,12 +8,12 @@
 
 IBM used our Bluemix Garage agile development methodology to build this prototype in accordance with the guidelines of the RFI. See: <https://www.ibm.com/devops/method>. 
 
-a. **_Assigned one leader and gave that person authority and responsibility and held that person
+1.  **_Assigned one leader and gave that person authority and responsibility and held that person
 accountable for the quality of the prototype submitted._**
 
 	IBM assigned a single person as the product manager for this prototype development effort.
 
-b. **_Assembled a multidisciplinary and collaborative team that includes, at a minimum, five of the labor categories as identified in Attachment C._**
+2.  **_Assembled a multidisciplinary and collaborative team that includes, at a minimum, five of the labor categories as identified in Attachment C._**
 
 	Our team consisted of 6 core members: a product manager, a technical architect, a front-end developer, a back-end developer, and two interaction designers.
 
