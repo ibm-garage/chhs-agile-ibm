@@ -1,7 +1,4 @@
-# Readme for CCHS RFI #75001
-<style type="text/css">
-    ol { list-style-type: lower-alpha; }
-</style>> The Git repository: <http://github.com/ibmbluemixgarage/chhs-agile-ibm>.
+# Readme for CCHS RFI #75001> The Git repository: <http://github.com/ibmbluemixgarage/chhs-agile-ibm>.
 
 > The wiki: <https://github.com/ibmbluemixgarage/chhs-agile-ibm/wiki>.
 
