@@ -59,5 +59,17 @@ describe('Inbox Module', function () {
       });
     });
 
+    describe('View Message', function() {
+
+      it('has message body', function() {
+        expect($scope.inboxData[0].body).toContain('Welcome to your Child');
+      });
+
+      it('has a showMessage function', function() {
+        expect($scope.showMessage).toBeDefined();
+      });
+
+    });
+
   });
 });

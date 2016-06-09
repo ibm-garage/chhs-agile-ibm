@@ -4,7 +4,8 @@
     <div flex-gt-xs="80" layout-align="left center">
       <md-content flex="">
         <md-list>
-          <md-list-item class="md-3-line" ng-repeat="inbox in inboxData">
+          <md-list-item class="md-3-line" ng-repeat="inbox in inboxData"
+                  ng-click="showMessage($event, inbox.title, inbox.from, inbox.body)">
             <div class="md-avatar">
               <i class="material-icons" style="width: 48px;margin: 16px;border-radius: 48px">account_circle</i>
             </div>

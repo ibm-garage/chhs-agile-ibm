@@ -21,4 +21,11 @@ describe('Inbox', function() {
   it('has a profile icon', function() {
     expect(element(by.cssContainingText('md-list-item', 'account_circle')).isPresent()).toBe(true);
   });
+
+  describe('shows body', function() {
+    it('should render list of message body', function() {
+      var inbox_list = element.all(by.repeater('inbox in inboxData'));
+      expect(inbox_list.get(0).getText()).toContain('From: Francis');
+    });
+  });
 });
